@@ -21,8 +21,8 @@ function App() {
   return (
       <section className="screen">
         <div className="chatarea">
-          <TextBox/>
-          <ChatInput/>
+          <TextBox reply={reply} setReply={setReply}/>
+          <ChatInput message={message} setMessage={setMessage} onSend={handleSendMessage}/>
         </div>
       </section>
   )

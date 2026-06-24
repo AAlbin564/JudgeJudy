@@ -2,12 +2,11 @@ import {sendMessage} from "../funcs/backend"
 import React from "react";
 import { useState } from "react";
 
-export default function ChatInput({}) {
-    const [text, setText] = useState('');
+export default function ChatInput({ message, setMessage, onSend }) {
     return (
         <div>
-            <input type="text" placeholder="Type your message here..." value={text} onChange={(e) => setText(e.target.value)} />
-            <button onClick={() => sendMessage(text)}>Send</button>
+            <input type="text" placeholder="Type your message here..." value={message} onChange={(e) => setMessage(e.target.value)} />
+            <button onClick={onSend}>Send</button>
         </div>
     )
 }

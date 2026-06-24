@@ -18,6 +18,3 @@ export const sendMessage = async (message) => {
     }
 }
 
-export const messageListner = (message) => {
-    console.log(message);
-}

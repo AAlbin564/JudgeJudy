@@ -2,6 +2,8 @@
 .venv/
 *.pyc
 __pycache__/
+prompts.json
+responses.json
 node_modules/
 dist/
 # Logs

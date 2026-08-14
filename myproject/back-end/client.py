@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+import os
+from anthropic import Anthropic
 
 load_dotenv()
 def generate_response(prompt, client, history):
@@ -33,12 +35,7 @@ def generate_response(prompt, client, history):
     return response.text
 
 def main():
-    gemini_key = os.getenv("Gemini")
-    print(f"Gemini Key: {gemini_key}")
-    client = genai.Client(api_key=gemini_key)
-    prompt = "what are the french good at?"
-    generate_response(prompt, client)
-    
+    print("hellofrom client")
 
 
 if __name__ == "__main__":
